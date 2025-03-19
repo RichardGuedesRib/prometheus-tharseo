@@ -5,5 +5,5 @@ scrape_configs:
   - job_name: 'nestjs'
     metrics_path: '/metrics'
     static_configs:
-      - targets: ['https://tharseo-backend-v2.onrender.com']  
+      - targets: ['tharseo-backend-v2.onrender.com:80']  
       # - targets: ['localhost:3000'] 
