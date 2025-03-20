@@ -3,3 +3,4 @@ FROM grafana/grafana:latest
 EXPOSE 3000
 
 ENTRYPOINT ["/usr/share/grafana/bin/grafana-server"]
+CMD ["--homepath", "/usr/share/grafana", "server"]
