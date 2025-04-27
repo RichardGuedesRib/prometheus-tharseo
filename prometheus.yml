@@ -2,8 +2,14 @@ global:
   scrape_interval: 15s
 
 scrape_configs:
-  - job_name: 'node-app'
+  - job_name: 'node-app-metrics'
     scrape_interval: 15s
     metrics_path: '/metrics'
+    static_configs:
+      - targets: ['tharseo-backend-v2.onrender.com:80']
+
+  - job_name: 'nestjs-health-check'
+    scrape_interval: 15s
+    metrics_path: '/health/check'  
     static_configs:
       - targets: ['tharseo-backend-v2.onrender.com:80']
